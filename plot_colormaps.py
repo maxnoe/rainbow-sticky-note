@@ -21,9 +21,6 @@ n_rows = len(colormaps)
 fig, axs = plt.subplots(n_rows, figsize=(62 / 25.4, 12 / 25.4), layout="constrained")
 
 for ax, cmap in zip(axs, colormaps):
-
-    # ax = fig.add_axes([0.2, i * height, 0.8, height])
-
     ax.imshow(gradient, aspect='auto', cmap=cmap)
     ax.text(
         -0.01, 0.5,
@@ -33,9 +30,7 @@ for ax, cmap in zip(axs, colormaps):
         fontsize=8,
         transform=ax.transAxes
     )
-    # axs.append(ax)
 
-# Turn off *all* ticks & spines, not just the ones with colormaps.
 for ax in axs:
     ax.set_axis_off()
 

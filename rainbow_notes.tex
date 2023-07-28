@@ -1,0 +1,65 @@
+\documentclass{minimal}
+\usepackage[paperwidth=72mm, paperheight=72mm, margin=2.5mm]{geometry}
+
+
+\usepackage{fontspec}
+\setsansfont{TeX Gyre Heros}
+\renewcommand\familydefault\sfdefault
+
+\usepackage[american]{babel}
+
+\usepackage[autostyle]{csquotes}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.25\baselineskip}
+
+\usepackage{tcolorbox}
+
+\usepackage{xcolor}
+\usepackage[colorlinks, urlcolor=blue!80!black]{hyperref}
+
+
+
+\begin{document}
+\fontsize{8}{10}\selectfont
+\begin{tabular}{@{}c@{}}%
+\includegraphics[width=0.3\textwidth]{build/norainbow.pdf}%
+\end{tabular}%
+\hfill%
+\begin{tabular}{@{}c@{}}%
+\begin{tcolorbox}[
+    colframe=black,
+    colback=white,
+    fontupper=\raggedright\bfseries,
+    width=0.68\textwidth,
+    boxrule=2pt,
+    sharp corners,
+    before skip=0pt,
+    before={},
+    boxsep=0mm,
+    left=1mm, right=1mm, top=1mm, bottom=1mm,
+]
+    Use of the rainbow colormap threatens the health of you and those around you.\textcolor{blue!80!black}{\textsuperscript{1}}
+\end{tcolorbox}
+\end{tabular}%
+
+\raggedright%
+Please consider using a perceptually uniform colormap, such as:
+
+\includegraphics[width=\linewidth]{build/cmaps.pdf}
+
+Rainbow colormaps distort your data and are not suited for people with color vision deficiencies.\textcolor{blue!80!black}{\textsuperscript{2}}\\
+For more info, watch this talk: \href{https://youtu.be/xAoljeRJ3lU}{youtu.be/xAoljeRJ3lU}.
+
+
+\vspace{\fill}
+\fontsize{6}{8}\selectfont
+\textcolor{blue!80!black}{\textsuperscript{1}}
+\enquote{%
+    We show statistically significant [...]
+    that a perceptually appropriate color map
+    leads to \textbf{fewer diagnostic mistakes} than a rainbow color map.%
+} – \href{https://doi.org/10.1109/TVCG.2011.19}{doi:10.1109/TVCG.2011.19}\\
+\textcolor{blue!80!black}{\textsuperscript{2}} Affects about 8\,\% of males and 0.5\,\% of females.
+
+\end{document}

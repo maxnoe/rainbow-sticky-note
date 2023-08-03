@@ -34,5 +34,4 @@ for ax, cmap in zip(axs, colormaps):
 for ax in axs:
     ax.set_axis_off()
 
-fig.savefig("build/cmaps.pdf")
-
+fig.savefig("build/colormaps.pdf")
